@@ -47,7 +47,7 @@ shell_exec = "4d5a90000300000004000000ffff0000b800000000000000400000000000000000
 #########################################
 
 # print main stuff for the application
-print """
+print( """
 ********************************************************************
         BSIDES Las Vegas ----  EXE to Teensy Creator
 ********************************************************************
@@ -56,6 +56,7 @@ Written by: Josh Kelley (@winfang98) and Dave Kennedy (ReL1K, @HackingDave)
 
 This program will take shellexeccode which is converted to hexadecimal and
 place it onto a victim machine through hex to binary conversion via powershell.
+""")
 
 #!/usr/bin/python
 import binascii,base64,sys,os,random,string,subprocess,socket
@@ -106,7 +107,7 @@ shell_exec = "4d5a90000300000004000000ffff0000b800000000000000400000000000000000
 #########################################
 
 # print main stuff for the application
-print """
+print("""
 ********************************************************************
         BSIDES Las Vegas ----  EXE to Teensy Creator
 ********************************************************************
@@ -118,7 +119,7 @@ place it onto a victim machine through hex to binary conversion via powershell.
 
 After the conversion takes place, Alphanumeric shellcode will then be injected
 straight into memory and the stager created and shot back to you.
-"""
+""")
 
 # if we dont detect metasploit
 if not os.path.isfile(msf_path): sys.exit("\n[!] Your no gangster... Metasploit not detected, check set_config.\n")
@@ -177,11 +178,11 @@ try:
 
 # except keyboardintterupts here
 except KeyboardInterrupt:
-    print """
+    print ("""
     .-. .-. . . .-. .-. .-. .-. .-.   .  . .-. .-. .-.
     |.. |-| |\| |.. `-.  |  |-  |(    |\/| | | |  )|-
     `-' ` ' ' ` `-' `-'  '  `-' ' '   '  ` `-' `-' `-'
-                                               disabled.\n"""
+                                               disabled.\n""")
 
     sys.exit("\n[!] Control-C detected. Bombing out. Later Gangster...\n\n")
 
@@ -387,9 +388,10 @@ print_status("[*] Housekeeping old files...")
 if os.path.isfile(setdir + "answer.txt"):
     # remove the old file, no longer used once we've exited
     subprocess.Popen("rm " + setdir + "answer.txt", shell=True).wait()
-After the conversion takes place, Alphanumeric shellcode will then be injected
+
+print("""After the conversion takes place, Alphanumeric shellcode will then be injected
 straight into memory and the stager created and shot back to you.
-"""
+""")
 
 # if we dont detect metasploit
 if not os.path.isfile(msf_path): sys.exit("\n[!] Your no gangster... Metasploit not detected, check set_config.\n")
@@ -448,11 +450,11 @@ try:
 
 # except keyboardintterupts here
 except KeyboardInterrupt:
-    print """
+    print( """
     .-. .-. . . .-. .-. .-. .-. .-.   .  . .-. .-. .-.
     |.. |-| |\| |.. `-.  |  |-  |(    |\/| | | |  )|-
     `-' ` ' ' ` `-' `-'  '  `-' ' '   '  ` `-' `-' `-'
-                                               disabled.\n"""
+                                               disabled.\n""")
 
     sys.exit("\n[!] Control-C detected. Bombing out. Later Gangster...\n\n")
 
@@ -658,4 +660,5 @@ print_status("[*] Housekeeping old files...")
 if os.path.isfile(setdir + "answer.txt"):
     # remove the old file, no longer used once we've exited
     subprocess.Popen("rm " + setdir + "answer.txt", shell=True).wait()
+
 
